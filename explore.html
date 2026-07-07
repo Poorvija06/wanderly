@@ -4,87 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Wanderly | Explore</title>
 </head>
 <body>
-    <section class="section1">
-        <a><h3> <i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h3></a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="explore.html">Explore</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html">Login</a>
+    <!-- Navigation Bar -->
+    <nav class="section1">
+        <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html" class="active">Explore</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html"><button class="login-btn">Login</button></a>
+    </nav>
 
+    <!-- Explore Destinations Section -->
     <section class="explore-section">
-    <h2> Explore Destinations</h2>
-    <i class="fa fa-plane" aria-hidden="true"></i>
-    <br>
-    <button id="btn1">All</button>
-    <button>Beach</button>
-    <button>Mountains</button>
-    <button>City</button>
-    <button>Adventure</button>
+        <h2>Explore Destinations</h2>
+        <div class="filter-buttons">
+            <button id="btn1" class="active">All</button>
+            <button>Beach</button>
+            <button>Mountains</button>
+            <button>City</button>
+            <button>Adventure</button>
+        </div>
     </section>
+
+    <!-- All Destinations Grid -->
     <section class="allsection">
-    <img src="images/bali.jpeg">
-    <h4>Bali, Indonesia</h4>
-    <p>From $409</p>
-    <img src="https://wallpaperbat.com/img/601036-greece-travel-indie-travel-podcast.jpg">
-   <h4>Santorini,Greece</h4>
-   <p>From $689 </p>
-   <img src="https://wallpaperaccess.com/full/1094090.jpg">
-   <h4>Switzerland</h4>
-   <p>From $699</p>
-   <img src="images/tokyo.jpeg">
-   <h4>Tokyo, japan</h4>
-   <p>From $789</p>
-   <img src="https://i.pinimg.com/originals/04/86/a1/0486a1de6e3baa3ea9c5ffdcba7d3bb9.jpg">
-   <h4>Maldives</h4>
-   <p>From $699</p>
-   <img src="https://t4.ftcdn.net/jpg/00/58/24/73/360_F_58247333_Rd57ZE0LkZq9MSu0Yq9yD94refPDsHJA.jpg">
-   <h4>Paris, France</h4>
-   <p>From $689</p>
-   <img src="https://img.freepik.com/premium-photo/statue-liberty-new-york-city_948381-1806.jpg">
-   <h4>New York, USA</h4>
-   <p>From $999</p>
-   <img src="images/Dubai.jpeg">
-   <h4> Dubai, UAE</h4>
-   <p> From $699</p>
-   <div id="box3">
+        <div class="card">
+            <img src="images/bali.jpeg" alt="Bali, Indonesia">
+            <h4>Bali, Indonesia</h4>
+            <p>From $409</p>
+        </div>
+        <div class="card">
+            <img src="https://wallpaperbat.com/img/601036-greece-travel-indie-travel-podcast.jpg" alt="Santorini, Greece">
+            <h4>Santorini, Greece</h4>
+            <p>From $689</p>
+        </div>
+        <div class="card">
+            <img src="https://wallpaperaccess.com/full/1094090.jpg" alt="Switzerland">
+            <h4>Switzerland</h4>
+            <p>From $699</p>
+        </div>
+        <div class="card">
+            <img src="images/tokyo.jpeg" alt="Tokyo, Japan">
+            <h4>Tokyo, Japan</h4>
+            <p>From $789</p>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/originals/04/86/a1/0486a1de6e3baa3ea9c5ffdcba7d3bb9.jpg" alt="Maldives">
+            <h4>Maldives</h4>
+            <p>From $699</p>
+        </div>
+        <div class="card">
+            <img src="https://t4.ftcdn.net/jpg/00/58/24/73/360_F_58247333_Rd57ZE0LkZq9MSu0Yq9yD94refPDsHJA.jpg" alt="Paris, France">
+            <h4>Paris, France</h4>
+            <p>From $689</p>
+        </div>
+        <div class="card">
+            <img src="https://img.freepik.com/premium-photo/statue-liberty-new-york-city_948381-1806.jpg" alt="New York, USA">
+            <h4>New York, USA</h4>
+            <p>From $999</p>
+        </div>
+        <div class="card">
+            <img src="images/Dubai.jpeg" alt="Dubai, UAE">
+            <h4>Dubai, UAE</h4>
+            <p>From $699</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="box3">
         <h2>Wanderly</h2>
-        <p> Let's make your next journey your best adventure yet.</p>
-        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        <p>Let's make your next journey your best adventure yet.</p>
+        <div class="footer-social">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </div>
+
         <nav>
-        <h3> Quick Links</h3>
-        <a href="index.html"> Home</a>
-         <a href="about.html"> About</a>
-        <a href="explore.html"> Explore</a>
-        <a href="contact.html"> Contact</a>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <h3>Top Destinations</h3>
-        <ul style="list-style: none;">
-            <li>Bali</li>
-            <li>Greece</li>
-            <li>Switzerland</li>
-            <li>Japan</li>
-        </ul>
-        <h3>Support</h3>
-        <ul style="list-style: none;">
-            <li>FAQ</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
-        </ul>
-        <h3>Newsletter</h3>
-        <p> Subscribe to get the latest travel updates and offers.</p>
-        <input type="text" placeholder="Enter your email">  
-        <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>  
-       </div><br><hr>
-       <footer>
-        @ 2026 Wanderly.All Rights Reserved.
-       </footer>
-</section>
+
+        <div>
+            <h3>Top Destinations</h3>
+            <ul>
+                <li>Bali</li>
+                <li>Greece</li>
+                <li>Switzerland</li>
+                <li>Japan</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Newsletter</h3>
+            <p>Subscribe to get the latest travel updates and offers.</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Enter your email">
+                <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 Wanderly. All Rights Reserved.</footer>
 </body>
 </html>
