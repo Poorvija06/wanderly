@@ -3,231 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Wanderly | Home </title>
-    <style>
-    .homesection {
-    background-image: url("https://cdn.wallpapersafari.com/91/23/hMJdSK.jpg");
-    background-repeat: no-repeat;   
-    background-size: cover;         
-    background-position: center;    
-    width: 100%;                    
-    height: 450px;
-    font-family: Arial, Helvetica, sans-serif;   
-    word-spacing: 2px;
-    
-                
-}
-.section1{
-    color: blue;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.fa-fa-plane{
-    width:100%;
-    height:100%;
-}
-.section1>a{
-    text-decoration: none;
-    text-align:center;
-    color: darkblue;
-    font-weight: 600;
-    
-}
-#home{
-    color: whitesmoke;
-    text-align: left;
-    padding: 24px;
-    font-size:larger;
-    gap: 10px;
-   
-   
-}
-#btn1{
-    background-color:darkblue;
-    color: whitesmoke;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    width: 10%;
-    height: 45px;
-}
-button{
-    background-color: whitesmoke;
-    color: darkblue;
-    padding: 15px;
-    border-radius: 5px;
-    width: 10%;
-    height: 45px;
-    border: none;
-    gap: 5px;
-    margin-left: 1.5rem;
-    
-}
-#box{
-    color: darkblue;
-    border: none;
-    display: flex;
-    flex-direction:row;
-    margin-left: 20px;
-    margin-right: 20px;
-    flex-wrap: nowrap;
-    background-color: whitesmoke;
-    border-radius: 5px;
-    padding: 45px;
-    gap:5px;
-
-}
-.icon {
-  color: blue;       
-  font-size: 24px;
-  margin-right: 8px;   
-}
-h2{
-    color: darkblue;
-}
-
-label {
-  color: black;      
-  font-size: 16px;  
-}
-#btn{
-    background-color:darkblue;
-    color: whitesmoke;
-    padding: 10px;
-    
-    border-radius: 5px;
-    border: none;
-    width: 7%;
-    height: 45px;
-    margin-top: 10px;
-}
-#box1{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-}
-.card{
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.12);
-transition:.3s;
-}
-
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-.card h4{
-padding:15px 15px 5px;
-color: darkblue;
-}
-.card p{
-padding:0 15px 18px;
-color:darkblue;
-font-weight:500;
-}
-
-.section1 {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-around;
-  align-items: center;
-
-}
-.section1 h2 {  
-  color:blue;
-}
-
-.section1 a {
-  text-decoration: none;  
-  color: darkblue;           
-  font-size: 16px;
-}
-.section1 a:hover{
-   color: blue;
-   text-decoration-line: underline;
-}
-#btn2{
-   background-color:darkblue;
-    color: whitesmoke;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    width: 120%;
-    height: 45px;  
-}
-#view{
-    float:right;
-    margin-right:30px;
-    margin-top:-30px;
-    color:blue;
-    cursor:pointer;
-}
-
-</style>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Wanderly | Home</title>
 </head>
 <body>
-    <section class="section1">
+    <!-- Navigation Bar -->
+    <nav class="section1">
         <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="explore.html">Explore</a>
-        <a href="contact.html">Contact</a>
-        <a href="login.html"><button id="btn2">Login</button></a>
-    </section>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html"><button class="login-btn">Login</button></a>
+    </nav>
+
+    <!-- Hero Section -->
     <section class="homesection">
         <div id="home">
-        <h1>Explore The <br>
-          Beauty of The World
-        </h1>
-        
-        <p> Discover amazing places at exclusive deals <br>and make your journey unforgettable.</p>
-        <button id="btn1"> Explore Now </button>
-        <button> Learn More </button>
+            <h1>Explore The<br>Beauty of The World</h1>
+            <p>Discover amazing places at exclusive deals<br>and make your journey unforgettable.</p>
+            <div class="hero-buttons">
+                <button id="btn1">Explore Now</button>
+                <button>Learn More</button>
+            </div>
         </div>
-        <div id="box">
-        <label>
-        <p><i class="fa fa-location-arrow icon" aria-hidden="true"></i> Location </p>
-       <input type="radio"> Where are you going ?</label> <hr>
-       <label>
-       <p><i class="fa fa-sign-in icon" aria-hidden="true"></i> Check in </p>
-       <input type="radio"> Add date</label><hr>
-        <label>
-       <p> <i class="fa fa-sign-out icon" aria-hidden="true"></i> Check Out</p>
-       <input type="radio"> Add date </label><hr>
-       <label>
-       <p><i class="fa fa-users icon" aria-hidden="true"></i> Guests </p>
-       <input type="radio"> Add guests</label>
-       <button id="btn"> Search </button>
-   </div>
-   <h2>Popular Destinations</h2>
-   <p id="view"> View All</p>
-   <div id="box1">
-  
-  <div class="card">
-    <img src="images/bali.jpeg">
-    <h4>Bali, Indonesia</h4>
-    <p>From $409</p>
-  </div>
-  <div class="card">
-    <img src="https://wallpaperbat.com/img/601036-greece-travel-indie-travel-podcast.jpg">
-    <h4>Santorini, Greece</h4>
-    <p>From $689</p>
-  </div>
-  <div class="card">
-    <img src="https://wallpaperaccess.com/full/1094090.jpg">
-    <h4>Switzerland</h4>
-    <p>From $699</p>
-  </div>
-  <div class="card">
-    <img src="images/tokyo.jpeg">
-    <h4>Tokyo, Japan</h4>
-    <p>From $789</p>
-  </div>
-</div>
-</section>
+    </section>
+
+    <!-- Search Box -->
+    <div id="box">
+        <div class="search-field">
+            <label><i class="fa fa-location-arrow icon" aria-hidden="true"></i> Location</label>
+            <input type="text" placeholder="Where are you going?">
+        </div>
+        <div class="search-field">
+            <label><i class="fa fa-sign-in icon" aria-hidden="true"></i> Check In</label>
+            <input type="date">
+        </div>
+        <div class="search-field">
+            <label><i class="fa fa-sign-out icon" aria-hidden="true"></i> Check Out</label>
+            <input type="date">
+        </div>
+        <div class="search-field">
+            <label><i class="fa fa-users icon" aria-hidden="true"></i> Guests</label>
+            <input type="number" placeholder="Add guests" min="1">
+        </div>
+        <button id="btn">Search</button>
+    </div>
+
+    <!-- Popular Destinations Section -->
+    <div class="destinations-header">
+        <h2>Popular Destinations</h2>
+        <p id="view"><i class="fa fa-arrow-right"></i> View All</p>
+    </div>
+
+    <div id="box1">
+        <div class="card">
+            <img src="images/bali.jpeg" alt="Bali, Indonesia">
+            <h4>Bali, Indonesia</h4>
+            <p>From $409</p>
+        </div>
+        <div class="card">
+            <img src="https://wallpaperbat.com/img/601036-greece-travel-indie-travel-podcast.jpg" alt="Santorini, Greece">
+            <h4>Santorini, Greece</h4>
+            <p>From $689</p>
+        </div>
+        <div class="card">
+            <img src="https://wallpaperaccess.com/full/1094090.jpg" alt="Switzerland">
+            <h4>Switzerland</h4>
+            <p>From $699</p>
+        </div>
+        <div class="card">
+            <img src="images/tokyo.jpeg" alt="Tokyo, Japan">
+            <h4>Tokyo, Japan</h4>
+            <p>From $789</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="box3">
+        <h2>Wanderly</h2>
+        <p>Let's make your next journey your best adventure yet.</p>
+        <div class="footer-social">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </div>
+
+        <nav>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div>
+            <h3>Top Destinations</h3>
+            <ul>
+                <li>Bali</li>
+                <li>Greece</li>
+                <li>Switzerland</li>
+                <li>Japan</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Newsletter</h3>
+            <p>Subscribe to get the latest travel updates and offers.</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Enter your email">
+                <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 Wanderly. All Rights Reserved.</footer>
 </body>
 </html>
