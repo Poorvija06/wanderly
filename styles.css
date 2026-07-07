@@ -199,7 +199,9 @@ body {
     gap: 20px;
     align-items: end;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    margin-bottom: 50px;
+    margin: -40px 40px 50px;
+    position: relative;
+    z-index: 10;
 }
 
 .search-field {
@@ -342,14 +344,17 @@ body {
     background-color: var(--white);
 }
 
-.aboutsection h2 {
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.about-header h2 {
     font-size: 32px;
     font-weight: 700;
     color: var(--text-dark);
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
 }
 
 .aboutsection .ic {
@@ -460,11 +465,15 @@ body {
     color: var(--text-dark);
     border: 2px solid #ddd;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 0px;
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
     transition: var(--transition);
+}
+
+.square-btn {
+    border-radius: 0px !important;
 }
 
 .filter-buttons button#btn1,
@@ -530,78 +539,20 @@ body {
    CONTACT PAGE STYLES
    ============================================ */
 
-.contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+.contact-section {
     padding: 60px 40px;
     background-color: var(--white);
 }
 
-.contact-form {
-    background-color: var(--bg-light);
-    padding: 30px;
-    border-radius: 8px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form label {
-    font-weight: 600;
-    color: var(--text-dark);
-    font-size: 14px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 14px;
-    color: var(--text-dark);
-    background-color: var(--white);
-    transition: var(--transition);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 61, 153, 0.1);
-}
-
-.contact-form textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.contact-form button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 12px 30px;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: var(--transition);
-    align-self: flex-start;
-}
-
-.contact-form button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
 #contact {
-    padding: 30px;
     background-color: var(--bg-light);
+    padding: 30px;
     border-radius: 8px;
 }
 
@@ -615,17 +566,6 @@ body {
     gap: 10px;
 }
 
-#contact h4 {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-top: 20px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 #contact p {
     font-size: 14px;
     color: var(--text-light);
@@ -633,10 +573,28 @@ body {
     margin-bottom: 10px;
 }
 
-#contact .social-icons {
+.contact-info-item {
+    margin: 25px 0;
+}
+
+.contact-info-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.follow-title {
+    margin-top: 30px;
+}
+
+.social-icons {
     display: flex;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 #contact .fa {
@@ -649,6 +607,87 @@ body {
 #contact .fa:hover {
     color: var(--primary-dark);
     transform: scale(1.1);
+}
+
+.contact-form-wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.contact-form {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contact-form h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-dark);
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 61, 153, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
 }
 
 /* ============================================
@@ -716,18 +755,24 @@ body {
 .login-section form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
-.login-section label {
+.login-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-form-group label {
     font-weight: 600;
     color: var(--text-dark);
     font-size: 14px;
 }
 
-.login-section input[type="text"],
-.login-section input[type="password"],
-.login-section input[type="email"] {
+.login-form-group input[type="text"],
+.login-form-group input[type="password"],
+.login-form-group input[type="email"] {
     padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 6px;
@@ -738,32 +783,16 @@ body {
     transition: var(--transition);
 }
 
-.login-section input[type="text"]:focus,
-.login-section input[type="password"]:focus,
-.login-section input[type="email"]:focus {
+.login-form-group input:focus {
     outline: none;
     border-color: var(--primary-color);
     background-color: var(--white);
     box-shadow: 0 0 0 3px rgba(0, 61, 153, 0.1);
 }
 
-.login-remember {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.login-remember input[type="checkbox"] {
-    cursor: pointer;
-}
-
-.login-remember label {
-    margin: 0;
-    cursor: pointer;
-}
-
 .forgot-password {
     text-align: right;
+    margin: 10px 0;
 }
 
 .forgot-password a {
@@ -779,7 +808,28 @@ body {
     text-decoration: underline;
 }
 
-.login-section button {
+.login-remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.login-remember input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.login-remember label {
+    margin: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.login-submit-btn {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 12px 30px;
@@ -792,7 +842,7 @@ body {
     margin-top: 10px;
 }
 
-.login-section button:hover {
+.login-submit-btn:hover {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
@@ -990,6 +1040,7 @@ footer {
     #box {
         grid-template-columns: 1fr;
         padding: 20px;
+        margin: -30px 20px 30px;
     }
 
     #box1, .allsection {
@@ -1005,9 +1056,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .contact-wrapper {
+    .contact-container {
         grid-template-columns: 1fr;
-        padding: 40px 20px;
     }
 
     .login-page {
@@ -1031,6 +1081,10 @@ footer {
 
     .why-travel-grid {
         grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 40px 20px;
     }
 }
 
@@ -1076,6 +1130,7 @@ footer {
         grid-template-columns: 1fr;
         padding: 15px;
         gap: 12px;
+        margin: -20px 15px 20px;
     }
 
     #btn {
@@ -1112,9 +1167,9 @@ footer {
         padding: 30px 20px;
     }
 
-    .contact-wrapper {
-        gap: 20px;
-        padding: 30px 15px;
+    .about-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .login-page {
@@ -1136,5 +1191,9 @@ footer {
 
     #box3 h2 {
         font-size: 18px;
+    }
+
+    .contact-section {
+        padding: 30px 15px;
     }
 }
