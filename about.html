@@ -4,121 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Wanderly | About</title>
-    <style>
-.section1{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:20px 40px;
-    font-family:Arial, Helvetica, sans-serif;
-   
-}
-
-.menu{ 
-    margin:0 35px;
-    text-decoration:none;
-    color:darkblue;
-    font-weight:600;
-
-}
-.menu:hover{
-   color: blue;
-   text-decoration-line: underline;
-}
-
-#btn2 {
-    padding: 15px 25px;
-    background:darkblue;
-    color:white;
-    border:none;
-    border-radius:5px;
-}
-#h2{
-    color: blue;
-}
-.aboutsection h2{
-  color: darkblue;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.aboutsection p{
-    font-family: Arial, Helvetica, sans-serif;
-}
-.ic{
-    color: blue;
-}
-.aboutsection>img{
-    width: 40%;
-    float: right;
-    padding-top: -40px;
-}
-
-
-</style>
 </head>
 <body>
-    <section class="section1">
-        <h2 id="h2"> <i class="fa fa-plane ic" ></i> Wanderly</h2>
-        <a href="index.html" class="menu">Home</a>
-        <a href="about.html" class="menu">About</a>
-        <a href="explore.html" class="menu">Explore</a>
-        <a href="contact.html" class="menu">Contact</a>
-        <a href="login.html" class="login-link"><button id="btn2">Login</button></a>
-    </section>
-    <section class="aboutsection">
-        <h2>About Us</h2>
-        <i class="fa fa-fighter-jet ic" aria-hidden="true"></i>
-        <p> At Wanderly, we believe that travel is more <p>than just visiting new places - it's about</p><p> creating unforgettable memories.</p>
-            <p>Our mission is to help travellers explore the </p><p>world with ease, comfort and the best</p><p>experiences possible.
-        </p>
-        <img src="images/about section.png">
-    </section>
-    <div id ="box2">
-        <h2>Why Travel With Us?</h2>
-        <h3>Best Prices</h3>
-        <p> We offer the best prices and amazing deals for your journey.</p>
-        <h3> Trusted Service </h3>
-        <p>Our team is available 24/7 to assist you anytime.</p>
-        <h3>Handpicked Hotels</h3>
-        <p>We partner with top-rated hotels for your comfortable stay.</p>
-        <h3>Memorable Experiences</h3>
-        <p>We help you create memories that last a lifetime.</p>
+    <!-- Navigation Bar -->
+    <nav class="section1">
+        <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="login.html"><button class="login-btn">Login</button></a>
+    </nav>
 
-    </div>
+    <!-- About Section -->
+    <section class="aboutsection">
+        <h2><i class="fa fa-fighter-jet ic" aria-hidden="true"></i> About Us</h2>
+        <div class="aboutsection-content">
+            <div class="aboutsection-text">
+                <p>At Wanderly, we believe that travel is more than just visiting new places - it's about creating unforgettable memories.</p>
+                <p>Our mission is to help travelers explore the world with ease, comfort and the best experiences possible.</p>
+                <p>We are dedicated to providing exceptional travel services that combine luxury, affordability, and authentic local experiences.</p>
+            </div>
+            <img src="images/about section.png" alt="About Wanderly">
+        </div>
+    </section>
+
+    <!-- Why Travel With Us Section -->
+    <section id="box2">
+        <h2>Why Travel With Us?</h2>
+        <div class="why-travel-grid">
+            <div class="why-travel-item">
+                <h3><i class="fa fa-dollar"></i> Best Prices</h3>
+                <p>We offer the best prices and amazing deals for your journey.</p>
+            </div>
+            <div class="why-travel-item">
+                <h3><i class="fa fa-headphones"></i> Trusted Service</h3>
+                <p>Our team is available 24/7 to assist you anytime.</p>
+            </div>
+            <div class="why-travel-item">
+                <h3><i class="fa fa-building"></i> Handpicked Hotels</h3>
+                <p>We partner with top-rated hotels for your comfortable stay.</p>
+            </div>
+            <div class="why-travel-item">
+                <h3><i class="fa fa-heart"></i> Memorable Experiences</h3>
+                <p>We help you create memories that last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <div id="box3">
         <h2>Wanderly</h2>
-        <p> Let's make your next journey your best adventure yet.</p>
-        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        <p>Let's make your next journey your best adventure yet.</p>
+        <div class="footer-social">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+        </div>
+
         <nav>
-        <h3> Quick Links</h3>
-        <a href="index.html"> Home</a>
-         <a href="about.html"> About</a>
-        <a href="explore.html"> Explore</a>
-        <a href="contact.html"> Contact</a>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <h3>Top Destinations</h3>
-        <ul style="list-style: none;">
-            <li>Bali</li>
-            <li>Greece</li>
-            <li>Switzerland</li>
-            <li>Japan</li>
-        </ul>
-        <h3>Support</h3>
-        <ul style="list-style: none;">
-            <li>FAQ</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
-        </ul>
-        <h3>Newsletter</h3>
-        <p> Subscribe to get the latest travel updates and offers.</p>
-        <input type="text" placeholder="Enter your email">  
-        <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>  
-       </div><br><hr>
-       <footer>
-        @ 2026 Wanderly.All Rights Reserved.
-       </footer>
+
+        <div>
+            <h3>Top Destinations</h3>
+            <ul>
+                <li>Bali</li>
+                <li>Greece</li>
+                <li>Switzerland</li>
+                <li>Japan</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Privacy Policy</li>
+                <li>Terms & Conditions</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Newsletter</h3>
+            <p>Subscribe to get the latest travel updates and offers.</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Enter your email">
+                <button><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2026 Wanderly. All Rights Reserved.</footer>
 </body>
 </html>
