@@ -1,6 +1,3 @@
-/* ============================================
-   GLOBAL STYLES & VARIABLES
-   ============================================ */
 
 * {
     margin: 0;
@@ -32,9 +29,6 @@ body {
     background-color: #fafbfc;
 }
 
-/* ============================================
-   NAVIGATION BAR STYLES
-   ============================================ */
 
 .section1 {
     display: flex;
@@ -89,8 +83,9 @@ body {
     border-bottom-color: var(--primary-light);
 }
 
-/* Login Button Styling */
+
 .login-btn {
+    text-decoration: none;
     background-color: var(--primary-color);
     color: var(--white);
     padding: 10px 25px;
@@ -106,15 +101,12 @@ body {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    text-decoration: none;
 }
 
-/* ============================================
-   HOME PAGE - HERO SECTION
-   ============================================ */
 
 .homesection {
-    background: linear-gradient(rgba(0, 61, 153, 0.5), rgba(0, 61, 153, 0.6)),
-                url("https://cdn.wallpapersafari.com/91/23/hMJdSK.jpg") center/cover no-repeat;
+    background:url("https://cdn.wallpapersafari.com/91/23/hMJdSK.jpg") center/cover no-repeat;
     width: 100%;
     min-height: 550px;
     display: flex;
@@ -186,9 +178,7 @@ body {
     box-shadow: var(--shadow-hover);
 }
 
-/* ============================================
-   SEARCH BOX STYLES
-   ============================================ */
+
 
 #box {
     background-color: var(--white);
@@ -257,9 +247,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ============================================
-   POPULAR DESTINATIONS SECTION
-   ============================================ */
 
 .destinations-header {
     display: flex;
@@ -335,9 +322,7 @@ body {
     font-size: 14px;
 }
 
-/* ============================================
-   ABOUT PAGE STYLES
-   ============================================ */
+
 
 .aboutsection {
     padding: 60px 40px;
@@ -386,7 +371,7 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Why Travel With Us Section */
+
 #box2 {
     background-color: var(--bg-light);
     padding: 60px 40px;
@@ -435,9 +420,6 @@ body {
     line-height: 1.6;
 }
 
-/* ============================================
-   EXPLORE PAGE STYLES
-   ============================================ */
 
 .explore-section {
     padding: 40px;
@@ -465,16 +447,13 @@ body {
     color: var(--text-dark);
     border: 2px solid #ddd;
     padding: 10px 20px;
-    border-radius: 0px;
+    border-radius: 5px;
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
     transition: var(--transition);
 }
 
-.square-btn {
-    border-radius: 0px !important;
-}
 
 .filter-buttons button#btn1,
 .filter-buttons button.active {
@@ -535,9 +514,6 @@ body {
     font-size: 14px;
 }
 
-/* ============================================
-   CONTACT PAGE STYLES
-   ============================================ */
 
 .contact-section {
     padding: 60px 40px;
@@ -690,9 +666,6 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* ============================================
-   LOGIN PAGE STYLES
-   ============================================ */
 
 .login-page {
     display: grid;
@@ -703,8 +676,7 @@ body {
 }
 
 .login-hero {
-    background: linear-gradient(rgba(0, 61, 153, 0.5), rgba(0, 61, 153, 0.6)),
-                url("https://cdn.wallpapersafari.com/91/23/hMJdSK.jpg") center/cover no-repeat;
+    background: url("https://www.maldives.com/uploads/large_Sun_S_Iyam_Vilu_Reef_Aerial_View_5df11c0d22.jpg") center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -866,10 +838,6 @@ body {
     color: var(--primary-dark);
 }
 
-/* ============================================
-   FOOTER STYLES
-   ============================================ */
-
 #box3 {
     background-color: var(--primary-dark);
     color: var(--white);
@@ -886,7 +854,6 @@ body {
     margin-bottom: 15px;
     grid-column: 1 / -1;
 }
-
 #box3 h3 {
     font-size: 16px;
     font-weight: 600;
@@ -1006,10 +973,6 @@ footer {
     font-size: 13px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 
 @media (max-width: 768px) {
     .section1 {
