@@ -28,6 +28,9 @@ html, body {
 body {
     background-color: #fafbfc;
 }
+.explore{
+    text-decoration: none;
+}
 
 
 .section1 {
