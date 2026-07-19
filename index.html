@@ -13,18 +13,19 @@
         <div class="logo">
         <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
        </div>
-        <div id="loader">
-            <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
-       </div>
       
         <div class="nav-links">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="explore.html">Explore</a>
             <a href="contact.html">Contact</a>
+            <button id="themeBtn" onclick="toggleTheme()">🌙</button>
         </div>
         <a href="explore/login.html" class="login-btn"><button class="login-btn">Login</button></a>
     </nav>
+     <div id="loader">
+            <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
+       </div>
      <div id="content">
     <section class="homesection">
         <div id="home">
@@ -39,21 +40,21 @@
     <div id="box">
         <div class="search-field">
             <label><i class="fa fa-location-arrow icon" aria-hidden="true"></i> Location</label>
-            <input type="text" placeholder="Where are you going?">
+            <input type="text"   id="location" placeholder="Where are you going?">
         </div>
         <div class="search-field">
-            <label><i class="fa fa-sign-in icon" aria-hidden="true"></i> Check In</label>
-            <input type="date">
+            <label><i class="fa fa-sign-in icon" aria-hidden="true" onclick=" validateDates()"></i> Check In</label>
+            <input type="date" id="checkin">
         </div>
         <div class="search-field">
-            <label><i class="fa fa-sign-out icon" aria-hidden="true"></i> Check Out</label>
-            <input type="date">
+            <label><i class="fa fa-sign-out icon" aria-hidden="true" onclick=" validateDates()"></i> Check Out</label>
+            <input type="date" id="checkout">
         </div>
         <div class="search-field">
             <label><i class="fa fa-users icon" aria-hidden="true"></i> Guests</label>
             <input type="number" placeholder="Add guests" min="1">
         </div>
-        <a href="search.html"><button id="btn">Search</button></a>
+        <button id="btn" onclick="searchHotels()">Search</button>
     </div>
     <div class="destinations-header">
         <h2>Popular Destinations</h2>
@@ -82,7 +83,6 @@
             <p>From $789</p>
         </div>
     </div>   
-    </div>
-    <script src="script.js"></script>   
+    <script src="script.js"></script>
  </body>
 </html>
