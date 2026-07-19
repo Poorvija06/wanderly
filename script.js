@@ -342,7 +342,6 @@ if (container) {
             <p id="hotelName"></p>
            <button onclick="closeBookingPopup()">OK</button>
          </div>
-         <span class="favorite" onclick="toggleFavorite(this)">🤍</span>
         </div>
             `;
         }
@@ -366,13 +365,7 @@ function bookNow(hotelName){
 function closeBookingPopup(){
     document.getElementById("bookingPopup").classList.remove("show");
 }
-function toggleFavorite(icon){
-    if(icon.innerHTML === "🤍"){
-        icon.innerHTML = "❤️";
-    }else{
-        icon.innerHTML = "🤍";
-    }
-}
+
 let checkIn = document.getElementById("checkin").value;
 let checkOut = document.getElementById("checkout").value;
 
