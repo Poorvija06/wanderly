@@ -1,6 +1,7 @@
 import "../styles/styles.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -73,8 +74,8 @@ function Login() {
             </div>
 
             <div className="forgot-password">
-              <a href="#">Forgot Password?</a>
-            </div>
+  <Link to="#">Forgot Password?</Link>
+</div>
 
             <div className="login-remember">
               <input type="checkbox" id="remember" />
@@ -97,10 +98,10 @@ function Login() {
           </form>
 
           <div className="login-signup">
-            <p>
-              Don't have an account? <a href="#">Sign Up</a>
-            </p>
-          </div>
+  <p>
+    Don't have an account? <Link to="/signup">Sign Up</Link>
+  </p>
+</div>
 
         </div>
       </div>

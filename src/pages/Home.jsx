@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import bali from "../assets/images/bali.jpeg";
 import tokyo from "../assets/images/tokyo.jpeg";
+import Explore from "./Explore";
 
 function Home() {
     const [location, setLocation] = useState("");
@@ -161,9 +162,9 @@ if (loading) {
 {/* Popular Destinations */}
 <div className="destinations-header">
   <h2>Popular Destinations</h2>
-  <a href="/explore" className="explore">
+ <Link to="/explore">
     <p id="view">View All</p>
-  </a>
+  </Link>
 </div>
 
 <div id="box1">

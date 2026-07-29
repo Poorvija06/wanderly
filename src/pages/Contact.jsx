@@ -4,19 +4,17 @@ import { Link } from "react-router-dom";
 
 function Contact() {
   const [showPopup, setShowPopup] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [darkMode, setDarkMode] = useState(
+  localStorage.getItem("theme") === "dark"
+);
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(e.target);
-
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
-
+const handleSubmit = () => {
   const phoneNumber = "919360827631";
 
-  const text = `Hello Wanderly ✈️
+   `
 
 Name: ${name}
 Email: ${email}
@@ -24,12 +22,9 @@ Email: ${email}
 Message:
 ${message}`;
 
-  window.open(
-    `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`,
-    "_blank"
-  );
+  const url = `https://wa.me/${phoneNumber}?message=${encodeURIComponent(message)}`;
 
-  e.target.reset();
+  window.open(url, "_blank");
 };
 
   return (
@@ -97,36 +92,43 @@ ${message}`;
 
                 <div className="form-group">
                   <label htmlFor="name">Your Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                  />
+                 <input
+  type="text"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+  placeholder="Enter your name"
+  required
+/>
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="email">Email Address</label>
                   <input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email"
-                    required
-                  />
+  type="email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  placeholder="Enter your email"
+  required
+/>
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="message">Message</label>
                   <textarea
-                    id="message"
-                    placeholder="Write your message..."
-                    required
-                  ></textarea>
+  value={message}
+  onChange={(e) => setMessage(e.target.value)}
+  placeholder="Write your message..."
+  required
+/>
                 </div>
 
-                <button type="submit" className="submit-btn">
-                  Send Message
-                </button>
+                <button
+  type="button"
+  className="submit-btn"
+  onClick={handleSubmit}
+>
+  Send Message
+</button>
 
               </form>
             </div>
@@ -162,6 +164,16 @@ ${message}`;
           </div>
         </div>
       )}
+      <button
+  id="themeBtn"
+  onClick={() => {
+    const newTheme = !darkMode;
+    setDarkMode(newTheme);
+    localStorage.setItem("theme", newTheme ? "dark" : "light");
+  }}
+>
+  {darkMode ? "☀️" : "🌙"}
+</button>
 
       {/* Footer */}
       <div id="box3">
