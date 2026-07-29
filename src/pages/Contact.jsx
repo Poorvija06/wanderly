@@ -1,15 +1,26 @@
 import "../styles/styles.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Contact() {
+
   const [showPopup, setShowPopup] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
   const [darkMode, setDarkMode] = useState(
   localStorage.getItem("theme") === "dark"
 );
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
 
 const handleSubmit = () => {
   const phoneNumber = "919360827631";
@@ -31,21 +42,42 @@ ${message}`;
     <>
       {/* Navbar */}
       <nav className="section1">
-        <h2>✈ Wanderly</h2>
 
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/explore">Explore</Link>
-          <Link to="/contact" className="active">
-            Contact
-          </Link>
-        </div>
+  <h2>
+    <i className="fa fa-plane"></i> Wanderly
+  </h2>
 
-        <Link to="/login">
-          <button className="login-btn">Login</button>
-        </Link>
-      </nav>
+
+  <div className="nav-links">
+
+  <Link to="/">Home</Link>
+
+  <Link to="/about">About</Link>
+
+  <Link to="/explore">Explore</Link>
+
+  <Link to="/contact" className="active">
+    Contact
+  </Link>
+
+
+  <button
+    id="themeBtn"
+    onClick={() => {
+      const newTheme = !darkMode;
+      setDarkMode(newTheme);
+      localStorage.setItem(
+        "theme",
+        newTheme ? "dark" : "light"
+      );
+    }}
+  >
+    {darkMode ? "☀️" : "🌙"}
+  </button>
+
+</div>
+
+</nav>
 
       {/* Contact */}
       <div className="contact-section">
@@ -164,17 +196,6 @@ ${message}`;
           </div>
         </div>
       )}
-      <button
-  id="themeBtn"
-  onClick={() => {
-    const newTheme = !darkMode;
-    setDarkMode(newTheme);
-    localStorage.setItem("theme", newTheme ? "dark" : "light");
-  }}
->
-  {darkMode ? "☀️" : "🌙"}
-</button>
-
       {/* Footer */}
       <div id="box3">
         <h2>Wanderly</h2>

@@ -9,9 +9,10 @@
   "lint": "eslint .",
   "preview": "vite preview",
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
-  "homepage": "https://poorvija06.github.io/wanderly"
+  "deploy": "gh-pages -d dist"
+  
 },
+ "homepage": "https://poorvija06.github.io/wanderly",
 "dependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7",

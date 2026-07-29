@@ -110,7 +110,7 @@ body {
 
 
 .homesection {
-    background:url("src/assets/images/backgroundimage.jpg") center/cover no-repeat;
+   background: url("../assets/images/backgroundimage.jpg") center/cover no-repeat;
     width: 100%;
     min-height: 550px;
     display: flex;
@@ -1436,7 +1436,7 @@ footer {
 .dark-mode .homesection{
     background:
     linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-    url("src/assets/images/backgroundimage.jpg")
+    url("../assets/images/backgroundimage.jpg")
     center/cover no-repeat;
 }
 
@@ -1446,4 +1446,9 @@ footer {
     linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
     url("https://www.maldives.com/uploads/large_Sun_S_Iyam_Vilu_Reef_Aerial_View_5df11c0d22.jpg")
     center/cover no-repeat;
+}
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
