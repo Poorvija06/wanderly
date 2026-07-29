@@ -1,88 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Wanderly | Home</title>
-    <link rel="icon" href="images/premium-download-icon-of-airplane-vector.jpg">
-</head>
-<body>
-    <nav class="section1">
-        <div class="logo">
-        <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
-       </div>
-      
-        <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="explore.html">Explore</a>
-            <a href="contact.html">Contact</a>
-            <button id="themeBtn" onclick="toggleTheme()">🌙</button>
-        </div>
-        <a href="explore/login.html" class="login-btn"><button class="login-btn">Login</button></a>
-    </nav>
-     <div id="loader">
-            <h2><i class="fa fa-plane" aria-hidden="true"></i> Wanderly</h2>
-       </div>
-     <div id="content">
-    <section class="homesection">
-        <div id="home">
-            <h1>Explore The<br>Beauty of The World</h1>
-            <p>Discover amazing places at exclusive deals<br>and make your journey unforgettable.</p>
-            <div class="hero-buttons">
-                <a href="explore.html"><button id="btn1">Explore Now</button></a>
-                <a href="about.html"><button>Learn More</button></a>
-            </div>
-        </div>
-    </section>
-    <div id="box">
-        <div class="search-field">
-            <label><i class="fa fa-location-arrow icon" aria-hidden="true"></i> Location</label>
-            <input type="text"   id="location" placeholder="Where are you going?">
-        </div>
-        <div class="search-field">
-            <label><i class="fa fa-sign-in icon" aria-hidden="true" onclick=" validateDates()"></i> Check In</label>
-            <input type="date" id="checkin">
-        </div>
-        <div class="search-field">
-            <label><i class="fa fa-sign-out icon" aria-hidden="true" onclick=" validateDates()"></i> Check Out</label>
-            <input type="date" id="checkout">
-        </div>
-        <div class="search-field">
-            <label><i class="fa fa-users icon" aria-hidden="true"></i> Guests</label>
-            <input type="number" placeholder="Add guests" min="1">
-        </div>
-        <button id="btn" onclick="searchHotels()">Search</button>
-    </div>
-    <div class="destinations-header">
-        <h2>Popular Destinations</h2>
-        <a href="explore.html" class="explore"><p id="view"> View All</p></a>
-    </div>
-
-    <div id="box1">
-        <div class="card">
-            <img src="images/bali.jpeg" alt="Bali, Indonesia">
-            <h4>Bali, Indonesia</h4>
-            <p>From $409</p>
-        </div>
-        <div class="card">
-            <img src="https://wallpaperbat.com/img/601036-greece-travel-indie-travel-podcast.jpg" alt="Santorini, Greece">
-            <h4>Santorini, Greece</h4>
-            <p>From $689</p>
-        </div>
-        <div class="card">
-            <img src="https://wallpaperaccess.com/full/1094090.jpg" alt="Switzerland">
-            <h4>Switzerland</h4>
-            <p>From $699</p>
-        </div>
-        <div class="card">
-            <img src="images/tokyo.jpeg" alt="Tokyo, Japan">
-            <h4>Tokyo, Japan</h4>
-            <p>From $789</p>
-        </div>
-    </div>   
-    <script src="script.js"></script>
- </body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="../images/premium-download-icon-of-airplane-vector.jpg">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wanderly | Home</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

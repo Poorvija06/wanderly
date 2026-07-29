@@ -1,34 +1,12 @@
-function login(event) {
+import "../styles/styles.css";
+import { useState, useEffect } from "react";
+function Search() {
+  const [hotels, setHotels] = useState([]);
 
-    event.preventDefault();
+  useEffect(() => {
+    const location = localStorage.getItem("location");
 
-    document.getElementById("successPopup").classList.add("show");
-
-    setTimeout(closePopup, 3000);
-
-}
-
-function closePopup() {
-
-    document.getElementById("successPopup").classList.remove("show");
-
-    window.location.href = "../index.html";
-
-}
-window.onload = function(){
-
-    setTimeout(function(){
-
-        let loader = document.getElementById("loader");
-
-        if(loader){
-            loader.style.display="none";
-        }
-
-    },2000);
-
-}
-const hotels = [
+    const hotelData = [
 
    // =================== Indonesia ===================
 {
@@ -305,136 +283,55 @@ const hotels = [
     price: "$180 / Night",
     rating: "⭐ 4.8"
 },
-]
-function searchHotels() {
+];
 
-    let location = document.getElementById("location").value;
+    if (location) {
+      const filtered = hotelData.filter((hotel) =>
+        hotel.location.toLowerCase().includes(location.toLowerCase())
+      );
 
-    localStorage.setItem("location", location);
+      setHotels(filtered);
+    } else {
+      setHotels(hotelData);
+    }
+  }, []
+);
+  return (
+    <div className="search-page">
+      <h1>Available Hotels</h1>
 
-    window.location.href = "search.html";
-}
+      <div id="hotelContainer">
+  {hotels.length > 0 ? (
+    hotels.map((hotel, index) => (
+      <div className="hotel-card" key={index}>
+        <img src={hotel.image} alt={hotel.hotel} />
 
-let container = document.getElementById("hotelContainer");
+        <div className="hotel-info">
+          <h2>{hotel.hotel}</h2>
 
-if (container) {
+          <p>📍 {hotel.location}</p>
 
-    let searchLocation = localStorage.getItem("location");
+          <p>{hotel.price}</p>
 
-    let output = "";
+          <p>{hotel.rating}</p>
 
-    for (let i = 0; i < hotels.length; i++) {
-
-        if (hotels[i].location.toLowerCase() === searchLocation.toLowerCase()) {
-
-            output += `
-                <div class="hotel-card">
-                    <img src="${hotels[i].image}" alt="${hotels[i].hotel}">
-                    <h2>${hotels[i].hotel}</h2>
-                    <p>📍 ${hotels[i].location}</p>
-                    <h3>${hotels[i].price}</h3>
-                    <p>${hotels[i].rating}</p>
-                    <button class="book-btn" onclick="bookNow('${hotels[i].hotel}')">
-                        Book Now
-                    </button>
-                </div>
-                <div id="bookingPopup" class="popup">
-          <div class="popup-content">
-            <h2>🎉 Booking Successful!</h2>
-            <p id="hotelName"></p>
-           <button onclick="closeBookingPopup()">OK</button>
-         </div>
+          <button
+            className="book-btn"
+            onClick={() =>
+              alert(`Booking confirmed for ${hotel.hotel}! 🎉`)
+            }
+          >
+            Book Now
+          </button>
         </div>
-            `;
-        }
-    }
-
-    if (output === "") {
-        output = "<h2>No Hotels Found 😔</h2>";
-    }
-
-    container.innerHTML = output;
-}
-let checkInElement = document.getElementById("checkin");
-let checkOutElement = document.getElementById("checkout");
-
-let checkIn = checkInElement ? checkInElement.value : "";
-let checkOut = checkOutElement ? checkOutElement.value : "";
-
-function bookNow(hotelName){
-
-    document.getElementById("hotelName").innerHTML =
-        "Your booking at <b>" + hotelName + "</b> has been confirmed! ✈️";
-
-    document.getElementById("bookingPopup").classList.add("show");
+      </div>
+    ))
+  ) : (
+    <h2>No Hotels Found.</h2>
+  )}
+</div>
+    </div>
+  );
 }
 
-function closeBookingPopup(){
-    document.getElementById("bookingPopup").classList.remove("show");
-}
-
-function searchHotels() {
-
-    let location = document.getElementById("location").value;
-    let checkIn = document.getElementById("checkin").value;
-    let checkOut = document.getElementById("checkout").value;
-
-    // Empty fields validation
-    if(location === "" || checkIn === "" || checkOut === ""){
-        alert("Please fill all the fields.");
-        return;
-    }
-
-    // Check-out must be after Check-in
-    if(new Date(checkOut) <= new Date(checkIn)){
-        alert("❌ Check-out date must be after the Check-in date.");
-        return;
-    }
-
-    localStorage.setItem("location", location);
-
-    window.location.href = "search.html";
-}
-function toggleTheme(){
-
-    document.body.classList.toggle("dark-mode");
-
-    let btn=document.getElementById("themeBtn");
-
-    if(document.body.classList.contains("dark-mode")){
-
-        localStorage.setItem("theme","dark");
-
-        if(btn){
-            btn.innerHTML="☀️";
-        }
-
-    }else{
-
-        localStorage.setItem("theme","light");
-
-        if(btn){
-            btn.innerHTML="🌙";
-        }
-
-    }
-
-}
-
-window.addEventListener("load",function(){
-
-    let theme=localStorage.getItem("theme");
-
-    if(theme==="dark"){
-
-        document.body.classList.add("dark-mode");
-
-        let btn=document.getElementById("themeBtn");
-
-        if(btn){
-            btn.innerHTML="☀️";
-        }
-
-    }
-
-});
+export default Search;
